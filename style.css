@@ -1619,6 +1619,43 @@ p.stat-label {
     .hero-content{
       padding-inline: 12px;
     }
+      /* Hero slider container should occupy full width */
+  .hero-slider {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius:0.5rem;
+  }
+
+  /* Track: no gaps, no clipping */
+  .slider-track {
+    display: flex;
+    gap: 0;
+    transition: transform 0.7s ease;
+  }
+
+  /* Each card fills the screen perfectly */
+  .slider-card {
+    min-width: 100% !important;
+    flex-shrink: 0;
+    margin-right: 0;
+    border-radius: 0;
+    height: 400px;
+  }
+
+  /* Ensure image scales properly */
+  .slider-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* Overlay centered text and background */
+  .card-overlay {
+    align-items: end;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
     .category-section,.bestseller-wrapper,
     .review-section,.faq-section,.find-section{
       padding: 32px 12px;
